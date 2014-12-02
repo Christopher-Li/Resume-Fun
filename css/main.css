@@ -2,3 +2,13 @@
 	background-image:url("http://www.whistlerweather.org/uploaded_images/PICT0478-723450.JPG");
 	margin-bottom:0px;
 }
+
+.strip {
+	min-height: 200px;
+}
+
+.strip>.picture {
+	z-index: 1;
+	background-image:url("http://www.whistlerweather.org/uploaded_images/PICT0478-723450.JPG");
+	height: 300px;
+}
