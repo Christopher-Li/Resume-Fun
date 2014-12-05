@@ -4,8 +4,10 @@ $(".full-screen").css("height", $(window).height() - 42 + "px");
 
 $( ".strip" ).hover(
   function() {
-    $( this">.picture" ).addClass( "hover" );
+    // alert($(this).children(".picture"));
+    $( this ).children(".picture").addClass("activepicture").removeClass("passivepicture");
+
   }, function() {
-    $( this ).removeClass( "hover" );
+    $( this ).children(".picture").addClass("passivepicture").removeClass("activepicture");
   }
 );

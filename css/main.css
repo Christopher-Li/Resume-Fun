@@ -1,14 +1,93 @@
+@font-face {
+font-family: BigJohn;
+src: url("../assets/BIG JOHN.otf") format("opentype");
+}
+
+* {
+	font-family: BigJohn;
+}
+
+body {
+	overflow-x: hidden;
+}
+
 .full-screen {
 	background-image:url("http://www.whistlerweather.org/uploaded_images/PICT0478-723450.JPG");
 	margin-bottom:0px;
+}
+
+.header {
+	font-size: 50px;
+	font-family: BigJohn;
+	text-align: center;
 }
 
 .strip {
 	min-height: 200px;
 }
 
-.strip>.picture {
+.picture {
+	background-color: white;
+	position: absolute;
+	width: 100%;
 	z-index: 1;
-	background-image:url("http://www.whistlerweather.org/uploaded_images/PICT0478-723450.JPG");
-	height: 300px;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 200px;
+}
+
+.information {
+	background-color:#EFECCA;
+	color: black;
+	min-height: 200px;
+}
+
+.information>h2, .information>h4, .information>h5 {
+	text-align: center;
+}
+
+.passivepicture {
+	-webkit-animation: picturepassiveshift 0.5s;
+	animation: picturepassiveshift 0.5s;
+}
+
+.activepicture {
+	margin-left: 100%;
+	-webkit-animation: pictureactiveshift 0.5s;
+	animation: pictureactiveshift 0.5s;
+}
+
+@-webkit-keyframes pictureactiveshift {
+    from  {margin-left: 0px;}
+    to {margin-left: 100%;}
+}
+
+keyframes pictureactiveshift {
+    from  {margin-left: 0px;}
+    to {margin-left: 100%;}
+}
+
+@-webkit-keyframes picturepassiveshift {
+    from  {margin-left: 100%;}
+    to {margin-left: 0px;}
+}
+
+keyframes picturepassiveshift {
+    from  {margin-left: 100%;}
+    to {margin-left: 0px;}
+}
+
+.intertekpicture{
+	background-image:url("../assets/intertek-logo.jpg");
+}
+
+.TSLpicture{
+	background-size: auto 160%;
+	background-image:url("../assets/TSL-logo.jpg");
+}
+
+.fa-chevron-right {
+	line-height: 40px;
+	width: 40px;
 }
